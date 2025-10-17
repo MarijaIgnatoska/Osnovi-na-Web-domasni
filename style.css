@@ -1,0 +1,19 @@
+h1  {font-family: 'Times New Roman', Times, serif; color: rgb(192, 81, 81); text-align: center; text-decoration: underline;}
+
+p { font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    text-align: center; color: rgba(129, 42, 42, 0.952); font-size: medium;}
+div p {text-align: left; }
+
+div {background-color: rgba(248, 214, 168, 0.836); padding-left: 50px; padding-right: 50px; padding-bottom: 40px; border-radius: 40px;}
+
+body {background-color:rgba(245, 230, 217, 0.986); margin-top: 30px; margin-bottom: 40px; margin-left: 70px; margin-right: 70px;
+padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;}
+
+label {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    text-align: left; color: rgba(194, 60, 26, 0.877);}
+
+a.klasa {text-decoration: none; color: rgba(99, 33, 33, 0.952);}
+a:hover {text-decoration: underline;}
+
+img { margin-left: 120px; margin-right: 120px; transition:3s;}
+img:hover {transform:scale(70%)}
