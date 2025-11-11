@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="stil1.css" type="text/css">
+    <script src="interaktivnost.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+           <ul>
+            <li> <a href="index.html">Почетна</a></li>
+            <li> <a href="stodaposetite.html">Што да посетите</a></li>
+            <li> <a href="interesnifakti.html">Интересни факти</a></li>
+            <li> <a href="najava.html">Најава</a></li>
+            <li> <a href="galerija.html">Галерија</a></li>
+           </ul>
+        </nav>
+      </header>
+      <main>
+<h2>Анкета за посетители на Будимпешта</h2>
+<p class="paragraf1">Би ни било од голема помош и значење ако ја потполните оваа анкета</p>
+<form class="anketa">
+    <label for="ime">Име и презиме:</label><br>
+    <input type="text" id="ime" name="ime" placeholder="Вашето име и презиме"><br><br>
+
+    <label for="drzava">Од која држава доаѓате?:</label><br>
+    <input type="text" id="drzava" name="drzava" placeholder="Вашата држава"><br><br>
+
+    <label>Начин на патување до Будимпешта:</label><br>
+    <select name="prevoz" id="prevoz">
+        <option value="">--Избери--</option>
+        <option value="avion">Авион</option>
+        <option value="voz">Воз</option>
+        <option value="avtobus">Автобус</option>
+        <option value="avtomobil">Автомобил</option>
+    </select><br>
+
+     <label>Колку денови престојувавте во Будимпешта?</label><br>
+    <input type="number" name="denovi" min="1" max="30"><br>
+   
+   <label>Кој дел на градот ви се допадна најмногу?</label><br>
+   <label for="buda">
+   <input type="radio" id="buda" name="del" value="Buda">Буда</label>
+    <label for="pesta">
+    <input type="radio" id="pesta" name="del" value="Pesta">Пешта</label>
+    <label for="dve">
+    <input type="radio" id="dve" name="del" value="Dve">И двете</label>
+    
+
+    <label>Дали крстаревте по Дунав?</label><br>
+    <label for="krstarenje">
+    <input type="radio" id="krstarenje" name="krstari" value="Да">Да</label>
+    <label for="krstarenje2">
+    <input type="radio" id="krstarenje2" name="krstari" value="Не">Не</label>
+    
+
+    <label>Локална храна која ја пробавте:</label><br>
+    <input type="text" id="hrana" name="hrana" placeholder="на пример: гулар, лангош"><br>
+
+    <label for="najomileno">Најомилено место во Будимпешта:</label><br>
+    <input type="text" id="najomileno" name="najomileno" placeholder="Напиши место"><br><br>
+
+    <label for="preporaki">Ваши препораки за туристи:</label><br>
+    <textarea id="preporaki" name="preporaki" rows="4" placeholder="Сподели совети"></textarea><br><br>
+
+    <label>Оцена на градот:</label><br>
+   <label for="1"> <input type="radio" id="1" name="ocena" value="1"> 1 (Многу лош) </label>
+   <label for="2"><input type="radio" id="2" name="ocena" value="2"> 2 (Ништо посебно)</label>
+   <label for="3"><input type="radio" id="3" name="ocena" value="3"> 3 (Добар)</label>
+    <label for="4"><input type="radio" id="4" name="ocena" value="4">4 (Интересен)</label>
+    <label for="5" ><input type="radio" id="5" name="ocena" value="5">5 (Предобар)</label><br><br>
+
+
+    <input type="submit" value="Испрати">
+    <div id="poraka"></div>
+</form>
+
+      </main>
+
+
+      <footer>
+      <p>© 2025 Истражи ја Будимпешта | Изработено од Марија Игнатоска</p>
+      </footer>
+
+      <script>
+    function porakazaanketa(){
+  const anketa=document.querySelector(".anketa");
+  const poraka=document.getElementById("poraka");
+  anketa.addEventListener("submit", function(event){
+    event.preventDefault();
+    poraka.textContent = "✅ Формата е успешно испратена! Ви благодариме.";
+
+    poraka.style.color = "green";
+    poraka.style.fontWeight = "bold";
+    poraka.style.marginTop = "10px";
+    anketa.reset();
+  })
+
+
+}
+porakazaanketa();
+</script>
+    
+</body>
+</html>
