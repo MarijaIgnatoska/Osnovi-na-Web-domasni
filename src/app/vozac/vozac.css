@@ -1,0 +1,22 @@
+.slika{
+    height: 200px;
+    width: 250px;
+    
+}
+
+.prva{
+    background-color: rgba(238, 202, 188, 0.968);
+    color: rgb(91, 47, 47);
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.kopce{
+margin: 5px;
+padding: 8px, 17px;
+border: none;
+border-radius: 4px;
+background-color: rgb(233, 168, 168);
+cursor: pointer;
+}

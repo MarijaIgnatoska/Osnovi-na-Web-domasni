@@ -1,0 +1,13 @@
+
+.logodiv{
+    
+    background-color: rgba(238, 210, 197, 0.968);
+    display: flex;
+    justify-content: center;
+    
+}
+.logo{
+    width: 1000px;
+    height: 500px;
+    
+}
