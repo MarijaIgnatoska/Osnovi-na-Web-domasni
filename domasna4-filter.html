@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   //dodavme nastan koga se vnese nesto vo Input polinjata
+    $("#myInput1, #myInput2, #myInput3").on("keyup", function(){
+       //Gi zemame vrednostite od input poleto i gi pravime da bidat vo mali bukvi
+        let ime=$("#myInput1").val().toLowerCase();
+        let prezime=$("#myInput2").val().toLowerCase();
+        let mail=$("#myInput3").val().toLowerCase();
+        //Prebaruvanjeto go pravime po sekoj red
+        $("#myTable tr").filter( function(){
+            //Za sekoj red ja zemame vrednosta od kolonite i ja pravime da bide vo mali bukvi
+            let Imetabela=$(this).find(".ime").text().toLowerCase();
+            let Prezimetabela=$(this).find(".prezime").text().toLowerCase();
+            let Mailtabela=$(this).find(".tabela").text().toLowerCase();
+
+            //Pravime sporedba so pomos na indexof() i so toggle se prikazuvaat samo redicite koi go sodrzat toa sto se bara
+            $(this).toggle( Imetabela.indexOf(ime)>-1 && Prezimetabela.indexOf(prezime)>-1 && Mailtabela.indexOf(mail)>-1);
+        })
+
+    })
+});
+
+
+
+
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput1" type="text" placeholder="Prebaraj ime..">
+<br><br>
+<input id="myInput2" type="text" placeholder="Prebaraj prezime..">
+<br><br>
+<input id="myInput3" type="text" placeholder="Prebaraj mail..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td class="ime">John</td>
+    <td class="prezime">Doe</td>
+    <td class="mail">john@example.com</td>
+  </tr>
+  <tr>
+    <td class="ime">Mary</td>
+    <td class="prezime">Moe</td>
+    <td class="mail">mary@mail.com</td>
+  </tr>
+  <tr>
+    <td class="ime">July</td>
+    <td class="prezime">Dooley</td>
+    <td class="mail">july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td class="ime">Anja</td>
+    <td class="prezime">Ravendale</td>
+    <td class="mail">a_r@test.com</td>
+  </tr>
+  </tbody>
+</table>
+  
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Најава</title>
+  <link rel="stylesheet" href="stil1.css">
+</head>
+<body>
+
+  <header>
+    <ul class="navbar">
+      <li><a href="index.html">Почетна</a></li>
+      <li><a href="fakti.html">Интересни факти</a></li>
+      <li><a href="poseta.html">Што да посетите</a></li>
+      <li><a href="galerija.html">Галерија</a></li>
+      <li><a href="anketa.html">Анкета</a></li>
+    </ul>
+  </header>
+
+  <section class="voved">
+    <h2>Пријави се за туристички понуди</h2>
+    <p>
+      Со пополнување на оваа форма ќе добиваш информации и промоции за интересни патувања, 
+      како и специјални понуди за Будимпешта и други европски дестинации.
+    </p>
+  </section>
+
+  <section class="anketa">
+    <form id="najava">
+      <label for="ime">Име:</label>
+      <input type="text" id="ime" name="ime" required>
+
+      <label for="prezime">Презиме:</label>
+      <input type="text" id="prezime" name="prezime" required>
+
+      <label for="vozrast">Возраст:</label>
+      <input type="number" id="vozrast" name="vozrast" min="10" max="100" required>
+
+      <label for="email">Е-пошта:</label>
+      <input type="email" id="email" name="email" placeholder="primer@mail.com" required>
+
+      <p class="note">
+        * Вашата е-пошта ќе се користи **само** за испраќање на туристички понуди, 
+        промоции и новости поврзани со патувања.
+      </p>
+
+      <input type="submit" value="Испрати">
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Туристички патувања | Изработено од Марија Игнатоска</p>
+  </footer>
+
+  <script>
+    document.getElementById("najava").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("🎉 Ви благодариме! Успешно се пријавивте за туристичките понуди.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
